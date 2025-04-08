@@ -1,0 +1,17 @@
+{
+	"folders": [
+	  {
+		"path": "."
+	  }
+	],
+	"settings": {
+	  "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+	  "python.terminal.activateEnvironment": true,
+	  "terminal.integrated.env.windows": {
+		"VIRTUAL_ENV": "${workspaceFolder}\\venv",
+		"PATH": "${workspaceFolder}\\venv\\Scripts;${env:PATH}"
+	  }
+	}
+}
+// Terminal › Integrated: Default Profile
+  
