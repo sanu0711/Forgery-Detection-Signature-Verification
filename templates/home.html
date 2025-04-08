@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Signature Verification{% endblock title %}
+{% block content %}
+
+<div class="container my-4">
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <div class="card h-100 shadow-sm   rounded-4 border-1 border-dark">
+                <div class="card-body">
+                  <h3 class="card-title">Forgery Detection <span class="text-danger">Signature Verification</span></h3>
+                  <h6 class="card-subtitle mb-4 text-body-secondary">Signature Authentication Using  Computer Vision and Machine Learning</h6>
+                  <p class="card-text">Our system uses <span class="text-danger">Computer Vision</span>  and <span class="text-danger">ML</span> to accurately detect forged signatures in real-time.
+                    It enhances <span class="text-danger">security</span> in document verification by distinguishing genuine signatures from fakes.
+                    Ideal for <span class="text-danger">banking, legal, and administrative</span> use cases where <span class="text-danger">trust</span> and <span class="text-danger">authenticity</span> are critical.</p>
+                    <video src="{% static 'img/sign.mp4' %}" autoplay loop muted class="img-fluid rounded-4 float-center" style="width: 80%; height: auto;"></video>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <form class="form h-100 shadow-sm rounded-4 border-1 border-dark" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <span class="form-title">
+                    Upload Your Signature
+                  </span>
+                    <p class="form-paragraph">
+                        Upload a clear image of your signature for verification.
+                        Ensure the image is well-lit and focused for best results.
+                    </p>
+                 <label for="file-input" class="drop-container mt-5">
+                <span class="drop-title">Drop files here</span>
+                or
+                <input type="file" accept="image/*" required="" id="file-input">
+              </label>
+              <div class="mt-4">
+                <button type="submit" class="btn btn-danger">Verify Now</button>
+              </div>
+              
+            </form>
+        </div>
+    </div>
+</div>
+  
+{% endblock content %}
