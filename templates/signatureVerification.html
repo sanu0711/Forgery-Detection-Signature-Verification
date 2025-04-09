@@ -34,7 +34,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Uploaded Signature</h5>
                     <p class="card-text">The signature you uploaded for verification.</p>
-                    <img src="{{ uploaded_signature_url }}" alt="Uploaded Signature" class="img-fluid rounded-4" style="width: 100%; height: auto;">
+                    <img src="{{ signature_image_url }}" alt="Uploaded Signature" class="img-fluid rounded-4" style="max-width: 300px;">
                 </div>
             </div>
         </div>
@@ -43,10 +43,10 @@
                 <div class="card-body">
                    <h5 class="card-title">Confidence Summary</h5>
                     <p class="card-text">The confidence level of the verification process.</p>
-                    <p class="text-start"><strong>Real Signature Confidence </strong></p>
+                    <p class="text-start"><strong>Real Signature Confidence {{real_conf}}</strong></p>
                     {% include "progress.html" with bgclass="success" width=real_conf %}
     
-                    <p class="text-start"><strong>Fake Signature Confidence</strong></p>
+                    <p class="text-start"><strong>Fake Signature Confidence {{fake_conf}}</strong></p>
                     {% include "progress.html" with bgclass="danger" width=fake_conf %}
                     <p class="text-start"><strong>Average Model Accuracy</strong></p>
                     {% include "progress.html" with bgclass="info" width=avg_model_accuracy %} 
