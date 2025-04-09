@@ -135,6 +135,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+tf-env-311/
 
 # Spyder project settings
 .spyderproject

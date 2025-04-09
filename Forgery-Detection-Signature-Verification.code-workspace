@@ -1,3 +1,19 @@
+// {
+// 	"folders": [
+// 	  {
+// 		"path": "."
+// 	  }
+// 	],
+// 	"settings": {
+// 	  "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+// 	  "python.terminal.activateEnvironment": true,
+// 	  "terminal.integrated.env.windows": {
+// 		"VIRTUAL_ENV": "${workspaceFolder}\\venv",
+// 		"PATH": "${workspaceFolder}\\venv\\Scripts;${env:PATH}"
+// 	  }
+// 	}
+// }
+
 {
 	"folders": [
 	  {
@@ -5,13 +21,16 @@
 	  }
 	],
 	"settings": {
-	  "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+	  "python.defaultInterpreterPath": "${workspaceFolder}\\tf-env-311\\Scripts\\python.exe",
 	  "python.terminal.activateEnvironment": true,
 	  "terminal.integrated.env.windows": {
-		"VIRTUAL_ENV": "${workspaceFolder}\\venv",
-		"PATH": "${workspaceFolder}\\venv\\Scripts;${env:PATH}"
+		"VIRTUAL_ENV": "${workspaceFolder}\\tf-env-311",
+		"PATH": "${workspaceFolder}\\tf-env-311\\Scripts;${env:PATH}"
 	  }
 	}
 }
+
+// tf-env-311\Scripts\activate
+
 // Terminal › Integrated: Default Profile
   
