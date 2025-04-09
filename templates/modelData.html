@@ -1,0 +1,24 @@
+<h4><strong>{{model.model_name}} Analysis</strong></h4>
+<div class="row">
+    <div class="col-6">
+        <p><strong>Model Name:</strong>{{model.model_name}}</p>
+        <p><strong>Functional:</strong>{{model.functional}}</p>
+        <p><strong>Model Accuracy:</strong> {{model.accuracy}}%</p>
+        {% if model.isverified == 1 %}
+        <p><i class="bi bi-check2-circle h5 text-success">Verified Signature</i> </p>
+        {% elif model.isverified == 0 %}
+        <p><i class="bi bi-x-circle h5 text-danger">Unverified Signature</i> </p>
+        {% else %}
+        <p><i class="bi bi-question-circle h5 text-warning">Unknown Signature</i> </p>
+        {% endif %}
+      
+            
+    </div>
+    <div class="col-6">
+        <h5>Confidence Scores</h5>
+        <p class="text-start"><strong>Real Signature Confidence </strong></p>
+        {% include "progress.html" with bgclass="success" width=model.real_conf %}
+        <p class="text-start"><strong>Fake Signature Confidence</strong></p>
+        {% include "progress.html" with bgclass="danger" width=model.fake_conf %}
+    </div>
+</div>
