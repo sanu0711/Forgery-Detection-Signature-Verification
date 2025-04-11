@@ -7,9 +7,9 @@ from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 SequentialModel_accuracy = 96.20
-resnet50Model_accuracy = 79.20
-vgg16Model_accuracy = 92.40
-vgg19Model_accuracy = 93.00
+resnet50Model_accuracy = 79.80
+vgg16Model_accuracy = 100.00
+vgg19Model_accuracy = 99.60
 
 
 def homeView(request):
@@ -29,7 +29,6 @@ def signatureVerificationView(request):
         resnet50 = prediction_score('resnet_model.h5', signature_img, ( 64, 64))
         vgg16 = prediction_score('vgg16_model.h5', signature_img,(64, 64)) 
         vgg19 = prediction_score('vgg19_model.h5', signature_img,(64, 64)) 
-        # vgg19 = 0.12
         SequentialModel = helperformatModelOutput("Sequential Model", "Sequential",SequentialModel_accuracy, sequential)
         resnet50Model = helperformatModelOutput("ResNet50 Model", "ResNet50", resnet50Model_accuracy, resnet50)
         vgg16Model = helperformatModelOutput("VGG16 Model", "VGG16", vgg16Model_accuracy, vgg16)

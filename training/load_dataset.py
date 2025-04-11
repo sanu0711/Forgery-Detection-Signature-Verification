@@ -1,12 +1,18 @@
 import os 
 import kagglehub
 import shutil
+from pathlib import Path
+
 
 # pip install git+https://github.com/Kaggle/kagglehub
 
+base_dir = Path(__file__).resolve(strict=True).parent.parent
 def download_dataset():
     curr_dir = os.path.dirname(os.path.abspath(__file__))
+    
+
     path = kagglehub.dataset_download("robinreni/signature-verification-dataset")
+    
     train_path = os.path.join(path, "train")
     test_path = os.path.join(path, "test")
     print("Path to dataset files:", path)
@@ -17,6 +23,7 @@ def download_dataset():
     os.makedirs("/content/Train/Real", exist_ok=True)
     os.makedirs("/content/Test/Fake", exist_ok=True)
     os.makedirs("/content/Test/Real", exist_ok=True)
+    
 
 def copy_files_local(src_dir, dst_dir_fake, dst_dir_real):
     print(f"Checking files in {src_dir}")
@@ -80,6 +87,7 @@ def testing_cpy_file():
         raise ValueError("One of the directories is empty. Please check the paths and ensure images are correctly copied.")
 
 if __name__ == "__main__":
+    print("Starting the dataset preparation process...")
     download_dataset()
     train_data_copy()
     test_data_copy()
