@@ -12,9 +12,10 @@ This project is a **Signature Forgery Detection System** built using **Django** 
 - Detect forged signatures using deep learning
 - Use transfer learning with pre-trained models for efficient training
 - Train multiple models for comparison and accuracy benchmarking
-- Serve predictions through a Django web interface (optional for deployment)
+- Serve predictions through a Django web interface 
 
 ---
+
 
 ## 🧠 Model Architectures
 
@@ -66,6 +67,40 @@ A standard CNN with multiple convolution and pooling layers followed by dense la
 - Epochs: `100` (early stopping with patience 30)
 
 ---
+
+## 🧰 Technologies & Libraries Used
+
+This project combines deep learning with web development to deliver a full-stack signature forgery detection system.
+
+### 🔧 Backend
+- **Django** — Web framework to handle routing, views, form submissions, file storage, and templating.
+- **Python** — Core programming language for backend logic and model execution.
+
+### 📄 Templating & Styling
+- **Django Template Language (DTL)** — For dynamic HTML rendering with logic blocks, URL routing, and static file linking.
+- **Bootstrap 5** — For responsive layout, modern UI components, grid system, and modals.
+- **Bootstrap Icons** — Used to visually enhance success/failure results.
+- **Custom CSS** — For additional design and theming.
+
+### 🤖 Machine Learning / Deep Learning
+- **TensorFlow / Keras** — To train, load, and infer from deep learning models:
+  - Custom Sequential CNN Model
+  - ResNet50 (Transfer Learning)
+  - VGG16 (Transfer Learning)
+  - VGG19 (Transfer Learning)
+- **NumPy / OpenCV** *(optional)* — For image preprocessing.
+
+### 🌐 Web Functionality
+- Signature image upload via Django form.
+- Real-time model prediction for 4 different CNN architectures.
+- Display of:
+  - Confidence scores per model
+  - Averaged result and final verification decision
+  - Signature preview for the uploaded image
+  - Responsive and mobile-friendly layout.
+
+---
+
 
 ## 📂 Dataset
 
