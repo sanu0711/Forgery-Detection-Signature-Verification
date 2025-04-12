@@ -25,7 +25,7 @@ def signatureVerificationView(request):
         # Use the saved file path for prediction if needed
         # saved_path = os.path.join(settings.MEDIA_ROOT, filename)
         # print(signature_img)
-        sequential = prediction_score('forg.h5', signature_img, (150, 150))
+        sequential = prediction_score('CustomCNN.h5', signature_img, (150, 150))
         resnet50 = prediction_score('resnet_model.h5', signature_img, ( 64, 64))
         vgg16 = prediction_score('vgg16_model.h5', signature_img,(64, 64)) 
         vgg19 = prediction_score('vgg19_model.h5', signature_img,(64, 64)) 
