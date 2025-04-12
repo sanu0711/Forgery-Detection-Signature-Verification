@@ -1,0 +1,47 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyo
+*.pyd
+*.pkl
+
+# Django-specific
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.mo
+*.db
+
+
+# Virtual environments
+venv/
+.venv/
+
+
+# OS / IDE / Editor stuff
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Git and CI
+.git
+.gitignore
+.github/
+
+# Test and coverage reports
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.cache
+.tox/
+nosetests.xml
+tests/
+junit.xml
