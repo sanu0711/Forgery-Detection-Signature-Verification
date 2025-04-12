@@ -127,9 +127,42 @@ To get started quickly, you can download the pre-trained `.h5` models from the f
 | VGG19          | Transfer Learning    | [Download](https://drive.google.com/drive/folders/15Dh7d9g2zpmRf7nnKMXb0toMeJWt38QW?usp=sharing) |
 
 
+
+
+## 🚀 Getting Started
+- Ensure you have installed Docker.
+
+
+### 📦 Clone the Repository
+```bash
+git clone https://github.com/sanu0711/Forgery-Detection-Signature-Verification.git
+```
+### 🐳 Navigate to the project directory
+```bash
+cd Forgery-Detection-Signature-Verification
+```
+
+### 🛠️ Build and Run the Application
+This command will build the Docker image and start the Django server inside a container.
+-  Place the downloaded .h5 files inside the trained_models/ directory before running the app.
+```bash
+docker-compose up --build
+```
+### 🌐 Access the Web App
+```
+http://localhost:8000/
+```
+Here, you can upload signature images and get real-time forgery predictions from 4 different deep learning models
+
+
 ## 🎥 Demo
 
 ![Demo](./static/demo/demo.gif)
+
+---
+
+
+
 
 
 
