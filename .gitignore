@@ -175,6 +175,6 @@ cython_debug/
 .pypirc
 
 
-trained_models/
+*.h5
 media/
 dataset/
